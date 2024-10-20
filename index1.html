@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyConnect - Productive Study Sessions</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><h1 id="study">STUDY<span> CONNECT.</span></h1></a>
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#find-partner">Find Partner</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#settings">Settings</a>
+        </div>
+        
+        <button id="toggle-theme">🌙</button>
+    </nav>
+
+    <main>
+        <section id="dashboard">
+            <h2>Study Session</h2>
+            <div class="session-details">
+                <div id="timer">
+                    <h3>Timer</h3>
+                    <div class="timer-display">25:00</div>
+                    <button id="timer-control">Start</button>
+                </div>
+                <div id="music-player">
+                    <h3>Study Music</h3>
+                    <div class="player-controls">
+                        <button id="prev-track">⏮</button>
+                        <button id="play-pause">▶</button>
+                        <button id="next-track">⏭</button>
+                    </div>
+                </div>
+            </div>
+            <div id="virtual-plant">
+                <canvas id="plant-canvas" width="200" height="200"></canvas>
+            </div>  
+                        <div id="progress-bar">
+                <h3>Focus Progress</h3>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+                <p class="progress-text">100%</p>
+            </div>
+            <div id="distraction-tracker">
+                <h3>Focus Meter</h3>
+                <div class="meter-container">
+                    <div class="meter"></div>
+                </div>
+                <p class="status">Highly Focused</p>
+            </div>
+        </section>
+
+        <section id="partner-interaction">
+            <h2>Study Partner</h2>
+            <div class="interaction-controls">
+                <button id="toggle-video" class="active">Video</button>
+                <button id="toggle-chat">Chat</button>
+            </div>
+            <div id="video-chat-container">
+                <div id="partner-video"></div>
+                <div id="chat-box" class="hidden">
+                    <div id="messages"></div>
+                    <input type="text" id="chat-input" placeholder="Type a message...">
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="notifications"></div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+:root {
+    --bg-color: #f0f4f8; /* Light background for light theme */
+    --text-color: black;
+    --nav-bg-color: #dcdcdc; /* Light grey for nav bar */
+    --button-color: #0BA34E; /* Button color */
+    --accent-color: #e74c3c;
+}
+
+body.dark-mode {
+    --bg-color: #1e1f20; /* Dark background for dark theme */
+    --text-color: #fff;
+    --nav-bg-color: #0c0c0c; /* Dark nav background */
+    --button-color: #0BA34E; /* Dark mode button color */
+    --accent-color: #e74c3c;
+}
+
+* {
+    margin-bottom: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--nav-bg-color); /* Light grey for nav bar */
+    color: var(--text-color); /* Updated to use variable */
+    margin-top: none;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: var(--text-color)
+}
+nav span{
+    color: #0BA34E;
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--text-color); /* Updated to use variable */
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+nav button{
+    margin: 10px;
+    border-radius: 100px;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+main {
+    padding: 2rem;
+}
+
+.session-details {
+    display: flex;
+    justify-content: center;
+    gap: 2;
+    margin-bottom: 2rem;
+    color: #0c0c0c;
+}
+
+#timer, #music-player {
+    background-color: white;
+    padding: 3vw;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+#timer {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    font-size: 2vw;
+}
+#music-player h3{
+    text-align: center;
+    margin-bottom:70px; 
+    font-size: 2vw;
+}
+.timer-display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#virtual-plant {
+    height: 200px;
+    background-color: #dcdcdc; /* Light grey for plant */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.progress-container, .meter-container {
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress, .meter {
+    height: 100%;
+    background-color: var(--button-color);
+    transition: width 0.3s ease;
+}
+
+#partner-interaction {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.interaction-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#video-chat-container {
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+
+#virtual-plant {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#plant-canvas {
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+}
+
+#notifications {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .session-details {
+        flex-direction: column;
+    }
+
+    #timer, #music-player {
+        margin-bottom: 1rem;
+    }
+}
